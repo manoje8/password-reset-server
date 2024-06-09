@@ -11,7 +11,9 @@ const app = express();
 
 app.use(express.json());
 app.use(cors({
-    origin: process.env.UI_URL
+    origin: process.env.UI_URL,
+    credentials:true,            //access-control-allow-credentials:true
+    optionSuccessStatus:200
 }))
 app.use(morgan("dev"))
 
