@@ -56,7 +56,7 @@ class User
             const otpExpire = new Date();
             otpExpire.setMinutes(otpExpire.getMinutes() + 5)
 
-            const link = `http://localhost:3000/reset-password`
+            const link = `${UI_URL}/reset-password`
 
             user.otp = otp;
             user.otpExpire = otpExpire

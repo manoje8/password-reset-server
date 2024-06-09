@@ -10,7 +10,9 @@ Mongo.connect();
 const app = express();
 
 app.use(express.json());
-app.use(cors())
+app.use(cors({
+    origin: process.env.UI_URL
+}))
 app.use(morgan("dev"))
 
 app.use("/", route)
